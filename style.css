@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+
+section {
+    /* 아래 설정을 통해서 모든 section을 중앙으로 집결 시킨다. */
+    display: grid;
+    place-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden-from-left {
+    /* 투명도를 0으로 해서 안보이게 */
+    opacity: 0;
+    /* 블러 처리를 넣음 */
+    filter: blur(5px); 
+    /* X축을 왼쪽으로 쭉 넣음 */
+    transform: translateX(-20%);
+    /* 변화하는 속도 */
+    transition: all 2s;
+}
+
+.hidden-from-right {
+    /* 투명도를 0으로 해서 안보이게 */
+    opacity: 0;
+    /* 블러 처리를 넣음 */
+    filter: blur(5px); 
+    /* X축을 왼쪽으로 쭉 넣음 */
+    transform: translateX(20%);
+    /* 변화하는 속도 */
+    transition: all 2s;
+}
+
+.show {
+    /* 투명도 해제 */
+    opacity: 1;
+    /* 블러 처리 해제 */
+    filter: blur(0);
+    /* x축 제 자리로 */
+    transform: translateX(0);
+}
+
+
+/* 좀 더 '젠틀'한 애니메이션을 보여준다는데 무슨 소리인지는 잘 모르겠다 */
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
