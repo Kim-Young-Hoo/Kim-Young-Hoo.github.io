@@ -13,14 +13,54 @@ h1 {
     font-size: 3rem;
 }
 
-
 section {
     /* 아래 설정을 통해서 모든 section을 중앙으로 집결 시킨다. */
-    display: grid;
+    display: flex;
+    flex-direction: column;
     place-content: center;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
 }
+/* generic css ends here */
+
+
+
+.round {
+    border-radius: 30px;
+}
+
+.picture-medium {
+    height: 50rem;
+    width: 50rem;
+    /* 이거 넣으면 원래 ratio 보존해준다는디? */
+    object-fit: cover;
+}
+
+
+
+.hidden-from-down {
+    /* 투명도를 0으로 해서 안보이게 */
+    opacity: 0;
+    /* 블러 처리를 넣음 */
+    filter: blur(5px); 
+    /* X축을 왼쪽으로 쭉 넣음 */
+    transform: translateY(30%);
+    /* 변화하는 속도 */
+    transition: all 2s;
+}
+
+.hidden-from-up {
+    /* 투명도를 0으로 해서 안보이게 */
+    opacity: 0;
+    /* 블러 처리를 넣음 */
+    filter: blur(5px); 
+    /* X축을 왼쪽으로 쭉 넣음 */
+    transform: translateY(-30%);
+    /* 변화하는 속도 */
+    transition: all 2s;
+}
+
 
 .hidden-from-left {
     /* 투명도를 0으로 해서 안보이게 */
@@ -38,7 +78,7 @@ section {
     opacity: 0;
     /* 블러 처리를 넣음 */
     filter: blur(5px); 
-    /* X축을 왼쪽으로 쭉 넣음 */
+    /* X축을 오른쪽으로 쭉 넣음 */
     transform: translateX(20%);
     /* 변화하는 속도 */
     transition: all 2s;
@@ -52,6 +92,30 @@ section {
     /* x축 제 자리로 */
     transform: translateX(0);
 }
+
+.logo-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo-container img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 500ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 1000ms;
+}
+
+
+.slower {
+    transition-delay: 100000ms;
+}
+
 
 
 /* 좀 더 '젠틀'한 애니메이션을 보여준다는데 무슨 소리인지는 잘 모르겠다 */

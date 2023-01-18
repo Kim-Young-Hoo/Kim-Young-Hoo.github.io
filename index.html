@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Document</title>
-</head>
-<body>
-
-    <section class="hidden-from-left">
-        <h1>
-            안녕? 내 이름은 김영후야
-        </h1>
-        <h3>
-            내 소개를 하려고 한단다.
-        </h3>
-    </section>
-
-    <section class="hidden-from-left">
-        <h1>
-            나는 N년차 개발자야
-        </h1> 
-        <p> 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 
-        </p>
-        <p> 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 
-        </p>
-
+  </head>
+  <body>
+    <section>
+      <div class="hidden-from-up">
+        <h1>안녕? 내 이름은 김영후야</h1>
+      </div>
+      <div class="hidden-from-down">
+        <img
+          src="static/imgs/my-picture.jpg"
+          class="picture-medium slower round"
+        />
+      </div>
     </section>
 
     <section class="hidden-from-right">
-        <h1>
-            잘하는 프레임워크는 다음과 같아
-        </h1> 
-        <p>
-            노드js, 플라스크, 지랄지랄
-        </p>
+      <h1>나는 N년차 개발자야</h1>
+      <p>어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구</p>
+      <p>어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구</p>
     </section>
 
+    <section>
+      <h1>잘하는 언어는 이거다 씨발아</h1>
+      <div class="logo-container">
+        <div class="logo hidden-from-left">
+          <img src="static/imgs/python.webp" alt="파이쓴" />
+        </div>
+        <div class="logo hidden-from-left">
+          <img src="static/imgs/java.png" alt="잡아" />
+        </div>
+        <div class="logo hidden-from-left">
+          <img src="static/imgs/js.png" alt="자스" />
+        </div>
+      </div>
+    </section>
 
-</body>
-<script src="app.js"></script>
-
+    <section>
+      <h1>이런 백엔드 프레임워크를 쓸줄 알지롱 병신아</h1>
+      <div class="logo-container">
+        <div class="logo hidden-from-left">
+          <img src="static/imgs/python.webp" alt="파이쓴" />
+        </div>
+        <div class="logo hidden-from-left">
+          <img src="static/imgs/java.png" alt="잡아" />
+        </div>
+        <div class="logo hidden-from-left">
+          <img src="static/imgs/js.png" alt="자스" />
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="app.js"></script>
 </html>
